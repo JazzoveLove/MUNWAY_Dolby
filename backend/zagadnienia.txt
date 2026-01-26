@@ -1,0 +1,27 @@
+1. MVT - Model-View-Template
+2. MVC - Model-View-Controller
+3. ORM - Object-Relational-Mapping
+4. Serializer
+5. DRF
+6. Pipeline
+7. Axios
+8. Hover
+9. After I before w css 
+10. Root w React
+11. Callbacki I promise w backend
+12. SSR
+13. Rodzaje Komponentów w React 
+14. Komponent z parametrami (props)
+15. Komponent z logiką
+16. Komponent wielokrotnego użytku 
+17. Komponenty zagnieżdżone 
+18. Hooks 
+19. Interceptor
+20. Instancja 
+21. Headers - nagłówki (list to dane a nagłówki jako koperta)
+22. Queryset
+23. Res - response 
+24. CORS
+25. Async tylko jak wait
+26. Refresh token 
+27. Middleware
