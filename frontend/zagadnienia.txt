@@ -1,0 +1,35 @@
+1. try catch throw :)
+2. async i await :) 
+3. Grupowanie według zasobów (Grupowanie według zasobów = trzymanie wszystkiego, co dotyczy jednej „rzeczy”, w jednym miejscu.) :)
+4. template literals (`${tu wartość()}`)
+5. useState
+6. HandleSubmit
+6. Local storage
+7. SPA
+8. DOM (Document Object Model)
+9. Controlled Components
+10. Logika bizesowa
+11. Context API
+12. destrukturyzacją tablicy
+13. Pusta lista kontrolna
+14. Interkom 
+15. Różnica w dzialaniu na pamięci np Context vs Local storage
+16. prop drilling
+17. event loop ( Call Stack, Web APIs / Async APIs, Task Queue / Microtask Queue, Event Loop )
+18. Promise (pending, fulfilled,rejected)  
+19. fetch (fetch zwraca Promise):)
+20. Layout
+21. children
+22. wrapping
+23. 
+
+
+
+
+
+
+
+
+
+
+1. Logika bizesowa
