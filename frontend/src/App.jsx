@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import { AuthProvider } from "./context/AuthContext";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

@@ -21,7 +21,8 @@
 20. Layout
 21. children
 22. wrapping
-23. 
+23. deklarowanie funkcji a wywolywanie funkcji 
+
 
 
 

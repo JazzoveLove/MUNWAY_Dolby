@@ -25,3 +25,6 @@
 25. Async tylko jak wait
 26. Refresh token 
 27. Middleware
+28. Kompilacja
+29. Parsowanie
+30. 
