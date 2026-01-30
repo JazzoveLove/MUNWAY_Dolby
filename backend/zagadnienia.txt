@@ -2,7 +2,7 @@
 2. MVC - Model-View-Controller
 3. ORM - Object-Relational-Mapping
 4. Serializer
-5. DRF
+5. DRF (Django Rest Framework)
 6. Pipeline
 7. Axios
 8. Hover
@@ -15,7 +15,6 @@
 15. Komponent z logiką
 16. Komponent wielokrotnego użytku 
 17. Komponenty zagnieżdżone 
-18. Hooks 
 19. Interceptor
 20. Instancja 
 21. Headers - nagłówki (list to dane a nagłówki jako koperta)
@@ -27,4 +26,6 @@
 27. Middleware
 28. Kompilacja
 29. Parsowanie
-30. 
+30. useState (hook React) :)
+31. useEffect (hook React) :)
+32. hooki => (useContext, useRef, useReducer, useMemo, useParams[to React Router nie React])

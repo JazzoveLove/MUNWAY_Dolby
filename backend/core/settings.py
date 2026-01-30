@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop',
     'authentication',
     'rest_framework_simplejwt',
+    'cart'
 ]
 
 MIDDLEWARE = [  
