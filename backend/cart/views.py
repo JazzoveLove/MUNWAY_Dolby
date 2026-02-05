@@ -3,9 +3,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.authentication import SessionAuthentication
 from shop.models import Product
 from .models import Cart, CartItem
+from .serializers import CartSerializer
 
 
 class AddToCartView(APIView):
@@ -49,3 +49,13 @@ class AddToCartView(APIView):
         except Cart.DoesNotExist:
             # 3. Jeśli nie ma koszyka, zwracamy 0
             return Response({"total_items": 0}, status=status.HTTP_200_OK)
+        
+class CartDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self,request):
+        try:
+            cartView = Cart.objects.get(user = request.user)
+            serializer = CartSerializer(cartView)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Cart.DoesNotExist:
+            return Response({"items": [], "total_price":0}, status=status.HTTP_200_OK)
