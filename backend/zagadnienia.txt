@@ -29,3 +29,20 @@
 30. useState (hook React) :)
 31. useEffect (hook React) :)
 32. hooki => (useContext, useRef, useReducer, useMemo, useParams[to React Router nie React])
+33. Poczytać o "select_for_update()" i "transakcjach atomowych"
+34. Operatory porównania (>, >=, <, <=) działają tylko na liczbach lub porównywalnych typach — nigdy na managerach ORM
+35. argument pozycyjny 
+36. argumenty nazwane
+37. W pythonie "=" a "=="
+38. konflikt nazw (shadowing)
+39. ".pk"
+40. UUID
+41. Persistent Cart
+42. 
+
+
+
+
+
+
+Persistent Cart !!!!!!! ->DOCELOWO 

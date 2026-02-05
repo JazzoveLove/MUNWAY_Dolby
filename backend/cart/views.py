@@ -9,7 +9,7 @@ from .models import Cart, CartItem
 
 
 class AddToCartView(APIView):
-  authentication_classes = [SessionAuthentication]
+
   permission_classes = [IsAuthenticated]  
   def post(self, request):
         prod_id = request.data.get('product_id')
@@ -38,3 +38,14 @@ class AddToCartView(APIView):
             "new_quantity": item.quantity,
             "cart_id": user_cart.pk
         }, status=status.HTTP_200_OK)
+  def get(self, request):
+        # 1. Sprawdzamy, czy użytkownik ma koszyk
+        try:
+            cart = Cart.objects.get(user=request.user)
+            # 2. Pobieramy elementy i sumujemy ilość
+            items = CartItem.objects.filter(cart=cart)
+            total_qty = sum(item.quantity for item in items)
+            return Response({"total_items": total_qty}, status=status.HTTP_200_OK)
+        except Cart.DoesNotExist:
+            # 3. Jeśli nie ma koszyka, zwracamy 0
+            return Response({"total_items": 0}, status=status.HTTP_200_OK)

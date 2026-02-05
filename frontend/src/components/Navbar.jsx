@@ -1,10 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import CartContext from "../context/CartContext";
 
 function Navbar() {
-  // 1. Pobieramy stan (user) i funkcję (logOutUser) z Centrali
+  // 1. Pobieramy stan (user) i funkcję (logOutUser) z AuthContext
   const { user, logOutUser } = useContext(AuthContext);
+
+  // 2. Pobieramy licznik z CartContext
+  const { cartCount } = useContext(CartContext);
 
   return (
     <nav
@@ -13,6 +17,7 @@ function Navbar() {
         justifyContent: "space-between",
         padding: "1rem",
         background: "#eee",
+        alignItems: "center", // Dodałem, żeby elementy były równo w pionie
       }}
     >
       <div>
@@ -22,18 +27,30 @@ function Navbar() {
       </div>
 
       <div>
-        {/* 2. Sprawdzamy 'user' zamiast starego 'isLoggedIn' */}
+        {/* 3. Logika wyświetlania: Zalogowany vs Niezalogowany */}
         {user ? (
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            {/* Opcjonalnie: Możesz tu wyświetlić np. "Witaj!" zamiast ikonki */}
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            {/* --- TU JEST TWÓJ NOWY KOSZYK --- */}
+            <span
+              style={{
+                fontSize: "18px",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              🛒 ({cartCount})
+            </span>
+            {/* ------------------------------- */}
+
             <span style={{ fontSize: "20px" }}>👤</span>
 
-            {/* 3. Używamy funkcji wylogowania prosto z Contextu */}
-            <button onClick={logOutUser}>Wyloguj</button>
+            <button onClick={logOutUser} style={{ cursor: "pointer" }}>
+              Wyloguj
+            </button>
           </div>
         ) : (
           <Link to="/login">
-            <button>Sign in</button>
+            <button style={{ cursor: "pointer" }}>Sign in</button>
           </Link>
         )}
       </div>

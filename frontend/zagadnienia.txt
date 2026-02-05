@@ -27,7 +27,9 @@
 26. Logowanie + cookies + fetch = zawsze credentials: "include"
 27. CSRF
 28. Stateless API (Bezkierunkowe API)
-
+29. Bearer 
+30. Redux Zustand
+31. 
 
 
 
