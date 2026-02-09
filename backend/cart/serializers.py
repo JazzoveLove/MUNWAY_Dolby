@@ -9,7 +9,7 @@ class CartItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CartItem
-        fields = ['id', 'product', 'quantity', 'reserved_until', 'sub_total']
+        fields = ['id', 'product', 'quantity',  'sub_total']
 
     def get_sub_total(self, obj):
         

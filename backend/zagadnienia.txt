@@ -38,7 +38,7 @@
 39. ".pk"
 40. UUID
 41. Persistent Cart
-42. 
+42. bezstanowością (statelessness)
 
 
 

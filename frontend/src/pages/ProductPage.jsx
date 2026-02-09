@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// WAŻNE: Musisz zaimportować guzik, żeby go użyć!
-// (Upewnij się, że ścieżka '../components/AddToCartBtn' jest poprawna dla Twojej struktury folderów)
 import AddToCartBtn from "../components/AddToCartBtn";
 
 function ProductPage() {
