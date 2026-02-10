@@ -54,17 +54,57 @@ const CartPage = () => {
   if (!cartData) return <div>Ładowanie koszyka...</div>; // Pudełko puste?
 
   return (
-    <div>
-      {/* Pudełko pełne? Rysujemy tabelkę */}
+    <div style={{ padding: "20px" }}>
       <h1>Twój Koszyk</h1>
-      {cartData.items.map((item) => (
-        <div key={item.id}>
-          {item.product.name} - {item.quantity} szt.
-          <button onClick={() => deleteItemFromCart(item.id)}>X</button>
-        </div>
-      ))}
+
+      {/* Lista produktów */}
+      <div style={{ marginBottom: "20px" }}>
+        {cartData.items.map((item) => (
+          <div
+            key={item.id}
+            style={{ borderBottom: "1px solid #ccc", padding: "10px 0" }}
+          >
+            <strong>{item.product.name}</strong> <br />
+            Ilość: {item.quantity} szt. | Cena:{" "}
+            <strong>{item.sub_total} zł</strong> {/* Nowe pole! */}
+            <button
+              onClick={() => deleteItemFromCart(item.id)}
+              style={{ marginLeft: "15px", color: "red" }}
+            >
+              Usuń
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Podsumowanie całego koszyka */}
+      <div
+        style={{
+          marginTop: "20px",
+          borderTop: "2px solid black",
+          paddingTop: "10px",
+        }}
+      >
+        <h3>
+          Łącznie do zapłaty:
+          <span style={{ color: "green", marginLeft: "10px" }}>
+            {cartData.total_price} zł {/* Nowe pole z głównego obiektu! */}
+          </span>
+        </h3>
+
+        <button
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "black",
+            color: "white",
+            cursor: "pointer",
+            width: "100%",
+          }}
+        >
+          PRZEJDŹ DO KASY
+        </button>
+      </div>
     </div>
   );
 };
-
 export default CartPage;
