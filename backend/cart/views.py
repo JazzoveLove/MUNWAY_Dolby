@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from shop.models import Product
 from .models import Cart, CartItem
 from .serializers import CartSerializer
+from django.shortcuts import get_object_or_404
 
 
 class AddToCartView(APIView):
@@ -59,3 +60,12 @@ class CartDetailView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Cart.DoesNotExist:
             return Response({"items": [], "total_price":0}, status=status.HTTP_200_OK)
+        
+class CartItemDeleteView(APIView):
+    permission_classes = [IsAuthenticated]
+    def delete(self,request,pk):
+            item = get_object_or_404(CartItem, id=pk, cart__user=request.user)
+            item.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
+        

@@ -1,37 +1,89 @@
-1. try catch throw :)
-2. async i await :) 
-3. Grupowanie według zasobów (Grupowanie według zasobów = trzymanie wszystkiego, co dotyczy jednej „rzeczy”, w jednym miejscu.) :)
-4. template literals (`${tu wartość()}`)
-5. useState
-6. HandleSubmit
-6. Local storage
-7. SPA
-8. DOM (Document Object Model)
-9. Controlled Components
-10. Logika bizesowa
-11. Context API
-12. destrukturyzacją tablicy
-13. Pusta lista kontrolna
-14. Interkom 
-15. Różnica w dzialaniu na pamięci np Context vs Local storage
-16. prop drilling
-17. event loop ( Call Stack, Web APIs / Async APIs, Task Queue / Microtask Queue, Event Loop )
-18. Promise (pending, fulfilled,rejected)  
-19. fetch (fetch zwraca Promise):)
-20. Layout
-21. children
-22. wrapping
-23. deklarowanie funkcji a wywolywanie funkcji 
-24. hoisting 
-25. destrukturyzacja propsow
-26. Logowanie + cookies + fetch = zawsze credentials: "include"
-27. CSRF
-28. Stateless API (Bezkierunkowe API)
-29. Bearer 
-30. Redux Zustand
-31. 
+Oto Twoja mapa drogowa, uporządkowana logicznie w moduły tematyczne. Zaznaczyłem to, co już "odhaczyłeś" (zgodnie z Twoimi emotikonami :) / ;)), oraz to, co przed nami.
 
+Wygląda to imponująco – masz już solidny fundament! 🏗️
+🟢 MODUŁ 1: JavaScript (Silnik Twojej aplikacji)
 
+Fundamenty języka, bez których React nie zadziała.
+
+    ✅ Template literals (${tu wartość()})
+
+    ✅ Destrukturyzacja tablicy [triki: a) Pomijanie, b) Wartości domyślne, c) Rest]
+
+    ✅ Async i await
+
+    ✅ Try catch throw
+
+    ✅ Fetch (fetch zwraca Promise)
+
+    ⬜ Tablicy vs obiekty (destrukturyzacja) – krótkie porównanie składni.
+
+    ⬜ Deklarowanie funkcji a wywoływanie funkcji – kiedy piszemy funkcja, a kiedy funkcja().
+
+    ⬜ Hoisting – dlaczego niektóre zmienne działają przed zadeklarowaniem.
+
+    ⬜ Promise (pending, fulfilled, rejected) – co siedzi "pod maską" async/await.
+
+    ⬜ Event Loop (Call Stack, Web APIs, Task Queue, Microtask Queue) – serce asynchroniczności JS.
+
+🔵 MODUŁ 2: React – Fundamenty (Cegły)
+
+Podstawowe klocki, z których budujesz interfejs.
+
+    ✅ DOM (Document Object Model), process Diffing
+
+    ✅ SPA vs MPA (Single Page vs Multi Page Application)
+
+    ✅ Grupowanie według zasobów (Struktura plików)
+
+    ✅ Logika biznesowa
+
+    ✅ useState (Pamięć krótkotrwała komponentu)
+
+    ✅ Controlled Components (Formularze sterowane przez React)
+
+    ✅ HandleSubmit
+
+    ⬜ Layout – jak stworzyć ramę strony (nagłówek, stopka).
+
+    ⬜ Children – specjalny prop do wkładania "klocka w klocek".
+
+    ⬜ Wrapping – owijanie komponentów w inne.
+
+    ⬜ Destrukturyzacja propsów – żeby nie pisać ciągle props.title.
+
+🟣 MODUŁ 3: React – Przepływ danych i Efekty (Krwiobieg)
+
+Jak komponenty gadają ze sobą i jak reagują na zmiany.
+
+    ✅ Local storage (Szuflada w biurku)
+
+    ✅ Różnica w działaniu na pamięci: Context vs Local storage
+
+    ⬜ Interkom [1) Props (dół), 2) Callbacks (góra), 3) Globalny] – teoretycznie omówiliśmy, ale warto przećwiczyć.
+
+    ⬜ Prop drilling – problem przekazywania danych przez 10 pięter.
+
+    ⬜ Context API (Magiczny portal) – rozwiązanie problemu prop drillingu.
+
+    ⬜ Pusta lista kontrolna [] (Uruchom tylko raz) – klucz do useEffect.
+
+    ⬜ Trzy tryby w useEffect [1) brak listy, 2) pusta lista, 3) lista z czymś]
+
+    ⬜ Mounting i Unmounting – narodziny i śmierć komponentu.
+
+    ⬜ Redux / Zustand – zewnętrzne biblioteki do stanu (poziom wyżej niż Context).
+
+🟠 MODUŁ 4: Architektura i Bezpieczeństwo (Świat Zewnętrzny)
+
+Jak Twoja aplikacja bezpiecznie gada z Backendem (Django).
+
+    ⬜ Stateless API (Bezkierunkowe API) – dlaczego serwer nie pamięta klienta.
+
+    ⬜ Logowanie + cookies + fetch (credentials: "include")
+
+    ⬜ Bearer – typ tokena (paszportu).
+
+    ⬜ CSRF – zabezpieczenie przed podszywaniem się.
 
 
 

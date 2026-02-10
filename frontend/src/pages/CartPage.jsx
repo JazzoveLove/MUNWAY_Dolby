@@ -24,6 +24,30 @@ const CartPage = () => {
     }
   };
 
+  const deleteItemFromCart = async (product_id) => {
+    const token = localStorage.getItem("access");
+
+    if (token) {
+      try {
+        const response = await fetch(
+          `http://127.0.0.1:8000/api/cart/items/${product_id}/`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        );
+        if (response.ok) {
+          fetchCart();
+        }
+      } catch (error) {
+        console.error("cos sie wysypalo z usuwaniem", error);
+      }
+    }
+  };
+
   useEffect(() => {
     fetchCart();
   }, []);
@@ -36,6 +60,7 @@ const CartPage = () => {
       {cartData.items.map((item) => (
         <div key={item.id}>
           {item.product.name} - {item.quantity} szt.
+          <button onClick={() => deleteItemFromCart(item.id)}>X</button>
         </div>
       ))}
     </div>

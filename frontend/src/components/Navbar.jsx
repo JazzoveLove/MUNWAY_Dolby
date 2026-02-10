@@ -30,16 +30,21 @@ function Navbar() {
         {/* 3. Logika wyświetlania: Zalogowany vs Niezalogowany */}
         {user ? (
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            {/* --- TU JEST TWÓJ NOWY KOSZYK --- */}
-            <span
-              style={{
-                fontSize: "18px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
+            {/* --- NOWA WERSJA (KLIKALNA) --- */}
+            <Link
+              to="/cart"
+              style={{ textDecoration: "none", color: "inherit" }}
             >
-              🛒 ({cartCount})
-            </span>
+              <span
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                🛒 ({cartCount})
+              </span>
+            </Link>
             {/* ------------------------------- */}
 
             <span style={{ fontSize: "20px" }}>👤</span>
